@@ -1,0 +1,119 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #dedede;
+    padding: 5px;
+    margin: 15px;
+    font-size: 25px;
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    text-align: center;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    font-size: 1.95em;
+}
+
+h2 {
+    text-align: center;
+}
+
+p {
+    text-align: centre;
+    font-size: 0.8em;
+    font-weight: bold;
+    justify-content: centre;
+    border: 5px dark red;
+    border-radius: 12%;
+    background-color: offwhite;
+    margin: 4px;
+    padding: 2px;
+    margin-bottom: 10px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 80%;
+}
+
+figure img {
+    border: 8px solid green;
+    border-radius: 25%;
+    max-height: 25vh;
+}
+
+figcaption {
+    position: relative;
+    bottom: 17%;
+    border: 6px solid green;
+    color: white;
+    font-size: 0.8em;
+    font-weight: bold;
+    background-color: black;
+}
+
+@media screen and (min-width:772px) {
+    .grid {
+       display: grid;
+       grid-template-columns: 1fr 1fr;
+       width: 50%;
+       gap: 1rem;
+    }
+
+    figure img {
+       border: 3px solid green;
+       border-radius: 50%;
+       max-height: 25vh;
+    }
+
+    figure last-child{
+       grid-column: span 2;
+    }
+}
+
+@media screen and (min-width:992px) {
+    .grid {
+       display: grid;
+       grid-template-columns: 1fr 1fr;
+       gap: 1rem;
+       width: 25%;
+    }
+
+    figure img {
+       border: 3px solid green;
+       border-radius: 25%;
+       max-height: 25vh;
+    }
+
+    figure:nth-of-type(3n) {
+       grid-column: span 2;
+    }
+}
+
+@media (prefers-reduce-motion: reduce) {
+    html{
+       scroll-behavior: auto;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+  figure {
+    background-color: black;
+    color: yellow;
+    border-color: #000;
+    border: 8px;
+    border-radius:25%;
+  }
+
+  body {
+    background-color: solid black;
+    padding: 5px;
+    margin: 15px;
+    font-size: 25px;
+    font-family: Arial, sans-serif;
+  }
+}
